@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+    .red{
+        background-color: red;
+    }
+    .text-color{
+        color: blue;
+    }
+   </style>
+    <title>class name and classlist</title>
+</head>
+<body>
+    <div id="a">sdsdsds</div>
+    <button id="sh">remove text color</button>
+
+    <script>
+        let a=document.getElementById("a");
+        a.className="red text-color";
+        // a.classList.remove("text-color")
+        // a.classList.add("text-color")
+        let sh=document.getElementById("sh");
+        sh.addEventListener("click",()=>{
+            a.classList.toggle("text-color");
+        });
+
+    </script>
+</body>
+</html>

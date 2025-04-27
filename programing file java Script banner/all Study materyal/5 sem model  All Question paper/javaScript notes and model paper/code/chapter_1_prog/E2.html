@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check to event or odd number</title>
+</head>
+<body>
+    <input type="number" id="num1" placeholder="Check odd or event">
+    <input type="button" id="sh" value="check" onclick="add()">
+<script>
+    
+    
+    add=()=>{
+        var a=document.getElementById("num1").value; 
+        parseInt(a);
+        if(a%2==0){
+            document.write("number is add");
+        }
+        else{
+            document.write("number is event");
+        }
+    }
+</script>
+</body>
+</html>

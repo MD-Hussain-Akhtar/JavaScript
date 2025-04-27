@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      mybannerimage=new Array("pic1.jpeg","pic2.jpeg","pic3.jpeg");
+      bannerCount=0;
+      mybanner=()=>{
+        if(document.images){
+            bannerCount ++;
+
+            if(bannerCount == mybannerimage.length){
+                bannerCount =0;
+            }
+            document.banner_image.src=mybannerimage[bannerCount];
+            setTimeout("mybanner()",2000);
+        }
+      }
+    </script>
+</head>
+<body onload="mybanner()">
+    <img src="pic1.jpeg" name="banner_image" height="300" width="100%">
+    
+</body>
+</html>

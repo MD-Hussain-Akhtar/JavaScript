@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var bannerimg=new Array("pic1.jpeg","pic2.jpeg","pic3.jpeg");
+        var i=0;
+        function bannerDisplay(silader){
+            i=i+silader;
+            if(i>bannerimg.length-1){
+                i=0;
+            }
+            if(i<0){
+                i=bannerimg.length-1;
+            }
+            document.img.src=bannerimg[i];
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <img src="pic1.jpeg" name="img" alt="">
+    <button onclick="bannerDisplay(-1)">next</button>
+    <button onclick="bannerDisplay(1)">back</button>
+</body>
+</html>

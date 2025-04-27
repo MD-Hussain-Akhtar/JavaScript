@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map ,filter, Reduse</title>
+</head>
+<body>
+    <Script>
+       //map
+a=[12,13,14,12]
+var m=(Value,index)=>{
+  console.log(Value,index)
+}
+console.log(a.map(m))
+
+//filter
+a1=[12,123,1,2,34,4];
+var f=(b)=>{
+  return b<30;
+}
+console.log(a1.filter(f))
+
+//reduse
+a2=[12,12,13,13];
+var r=(a,b)=>{
+  return a+b;
+}
+console.log(a2.reduce(r))
+    </Script>
+</body>
+</html>

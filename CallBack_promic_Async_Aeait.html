@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async await </title>
+</head>
+
+<body>
+
+
+    <script>
+        async function wather() {
+            let delhiWether = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("25 degree")
+                }, 2000);
+            })
+            let dwather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("253 degree")
+                }, 7000);
+            })
+            console.log("delhi wether is wating ")
+            let delhiW = await delhiWether
+            console.log("delhi wether is :" + delhiW)
+
+            console.log("Dhairadun wether is wating ")
+            let dhairadunW = await dwather
+            console.log("Dhairadun wether is :" + dhairadunW)
+            return [delhiW, delhiWether]
+        }
+
+        let chery = async () => {
+            console.log("hey i am chering i am note wating ");
+        }
+       sh=async()=> {
+
+            console.log("Welcom  To wether Control:")
+            let a =await wather();
+            let c=await chery()
+          
+            
+        }
+        sh()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local and global Scope</title>
+</head>
+<body>
+    
+    <script>
+        var a=10; //it is blobal Scope it used to inside the function use and outside function 
+    sh=()=> {
+           console.log(a) // it is used to to inside function 
+           let b=12;
+           console.log(b)
+            
+        }
+        consol.log(b) //Error thrws b is define block of code 
+    </script>
+</body>
+</html>

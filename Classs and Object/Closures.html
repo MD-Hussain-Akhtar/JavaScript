@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures in JavaScript</title>
+</head>
+
+<body>
+    <!-- :A closure is the combination of a function bundled together (enclosed) with references to its
+    surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope
+    from an inner function. In JavaScript, closures are created every time a function is created, at function creation
+    time.
+    
+    Closure ek aise concept hai jisme ek function ko uske surrounding state ke sath bundle kiya jata hai. Iska matlab
+    hai ki ek inner function ko outer function ke scope tak access milta hai. JavaScript me, jab bhi ek function create
+    hota hai, tab ek closure bhi create hota hai. Yani ki har function creation ke samay closure ban jata hai. -->
+
+    <script>
+        // function outnerfunction(outverible){
+        //     return function innerfunction(innerveriable){
+        //         console.log(outverible)
+        //         console.log(innerveriable)
+        //     }
+        // }
+        // let a=outnerfunction("Hussain Akhter")
+        // a("mallick")
+
+        function a() {
+            function b() {
+                console.log("B")
+            }
+            return b();
+        }
+        a()
+    </script>
+</body>
+
+</html>

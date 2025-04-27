@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>method Overiding</title>
+</head>
+<body>
+    <script>
+        class class1{
+            student(){
+                     console.log("my name is Hussain Akhter")
+            }
+        }
+      class class2 extends class1{
+        student()
+        {
+            super.student();
+            console.log("my name is mallick")
+        }
+
+      }
+      let principle=new class2();
+      principle.student()
+      
+    </script>
+</body>
+</html>
+
+<!-- importent note 
+ if firt class deciler constracter and is class drive another class drive 
+ are constracter class create we can call a supper keword if note
+ write supper class cosole are error Through 
+  for example:-
+  class student{
+  constracter(){
+  console.log("my nameis hussain akhter")
+  }
+  
+  }
+
+  class stuent2 extends student{
+  constracter(){
+  supper() first class canstracter call
+  console.log("my name is shaddam")
+  }
+  }
+  
+  ...outupt is:---
+  my name is hussain akhter
+  my name is shaddam
+
+-->

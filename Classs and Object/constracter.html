@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constracter</title>
+</head>
+<body>
+    <script>
+// The purpose of a constructor is to create a new object and set values for any existing object properties.
+
+    class student{
+        constructor(name,tnumbers) {
+            this.name=name;
+            this.tnumbers=tnumbers
+            console.log(`Train name is ${this.name} and train number is ${this.tnumbers}`)
+            this.submit()
+        }
+
+        submit(){
+            console.log(`you train is boolcked train numbrer is ${this.tnumbers}`)
+        }
+        
+    }
+    let a=new student("husasin akhter","12")
+    </script>
+</body>
+</html>

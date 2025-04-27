@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immediately Invoked Function Expression</title>
+</head>
+
+<body>
+
+
+
+    Destructuring_assignment
+    <script>
+        let a = () => {
+        return new Promise((resulve, reject) => {
+            setTimeout(() => {
+                resulve(404)
+            }, 2000);
+        })
+    }
+
+            //Immediately Invoked Function Expression:--
+            (async () => {
+    let a1 = await a();
+    console.log(a1); // Logs 404 after 2 seconds
+
+    let a2 = await a();
+    console.log(a2); // Logs 404 after another 2 seconds
+
+    let a3 = await a();
+    console.log(a3); // Logs 404 after another 2 seconds
+})();
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+.bulbe{
+    width: 365px;
+    height: 365px;
+    background: yellow;
+}
+.cainter{
+    width: 365px;
+    height: 365px;
+}
+   </style>
+    <title>bulbe</title>
+</head>
+<body>
+    <div id="bulb" class="bulbe cainter">
+
+    </div>
+
+    <script>
+setInterval(function(){
+    document.querySelector('#bulb').classList.toggle('bulbe');
+
+},300);
+    </script>
+</body>
+</html>

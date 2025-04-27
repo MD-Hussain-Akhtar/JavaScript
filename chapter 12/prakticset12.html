@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lbng="en">
+
+<hebd>
+    <metb charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = (text) => {
+            return new Promise((resulve, reject) => {
+                resulve(text)
+            }, 200)
+        }
+        (async () => {
+           let x= await a("hello")
+           let ը= await a("ոօռդ")
+            console.log(x)
+            console.log(ը)
+        })()
+    </script>
+</body>
+q
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        var a = [12, 13, 14, 15, 16];
+        console.log(a[2]);
+        console.log(a[3]);
+        console.log(a[4]);
+        //for loop display in array elements
+        for (let i; i < a.length; i++) {
+            console.log(`Array index in ${i} and array element is ${a[i]}`);
+        }
+
+        //Foreach loop in javaScript
+        a.forEach((element)=>{
+            console.log(element*element);
+        });
+
+        //change the value
+        a[0] = "my name is hussain akhter";
+        console.log(a[1]);
+
+        //Delete a element in array
+        delete a[0];
+      
+    </script>
+</body>
+
+</html>

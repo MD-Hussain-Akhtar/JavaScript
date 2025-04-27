@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack promiss chining</title>
+</head>
+
+<body>
+
+
+    <script>
+        let p1 = new Promise((resolve, rejected) => {
+            setTimeout(() => {
+                resolve("process 1")
+            }, 2000);
+        });
+
+        p1.then((value) => {
+            console.log(value);
+            let p2 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve("process 2");
+                }, 2000);
+            })
+            return p2;
+                }).then(() => {
+                    console.log("process 2 are secussfullay");
+                    return 2; 
+        }).then((value)=>{
+            setTimeout(()=>{
+                console.log("process are conform Done")
+            },2000)
+        })
+    </script>
+</body>
+
+</html>

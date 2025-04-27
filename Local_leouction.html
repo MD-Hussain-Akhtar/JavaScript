@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local Stroge and method</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let key=prompt("Enter localhost key:");
+        let value=prompt("Enter localhost value:");
+        console.log(localStorage.key(0))
+        // console.log(localStorage.length)
+        // localStorage.setItem(key,value);
+        console.log(`localStroge key is ${key} and value is ${localStorage.getItem(key)}`);
+        if(key==0){
+            localStorage.clear()
+        }
+    </script>
+</body>
+</html>

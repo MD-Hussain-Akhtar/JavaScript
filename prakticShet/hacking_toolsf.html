@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hack on your data</title>
+</head>
+<body>
+    <div id="text" class="text"></div>
+
+    <script>
+        let a = [
+        "Initializing Hack tool...",
+        "Connecting to Facebook...",
+        "Connecting to server 1...",
+        "Connection failed. Retrying...",
+        "Connecting to server 2",
+        "Connected Successfully...",
+        "Username iamharry...",
+        "Trying Brute Force...",
+        "200K passwords tried...",
+        "Match not found",
+        "Another 200K passwords tried...",
+        "Match not found...",
+        "Another 200K passwords tried...",
+        "Match not found...",
+        "Another 200K passwords tried...",
+        "Match found...",
+        "Accessing Account...",
+        "Hack Successful..."
+]
+let sleep=async(second)=>{
+ return new Promise((resoul,raject)=>{
+    setTimeout(()=>{resoul()},second*2000)
+ })
+
+}
+
+let showhack=async(message)=>{
+    await sleep(4);
+   let r=document.createElement("div")
+   text.innerHTML=text.innerHTML+message+"<br/>";
+}
+(async ()=>{
+    for(var i=0;i<a.length; i++){
+   await showhack(a[i])
+    }
+})()
+
+
+
+    </script>
+</body>
+</html>

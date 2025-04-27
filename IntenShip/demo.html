@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo</title>
+</head>
+
+<body>
+    <script>
+        function scriptlode(src) {
+            return new Promise((resolve, reject) => {
+                let script = document.createElement('script');
+                script.src = src;
+                document.body.appendChild(script);
+
+                script.onload = () => {
+                    resolve("your Script are rejct")
+                }
+                script.onerror = () => {
+                    reject("Script is note loded")
+                }
+            })
+        }
+        let scriptlod = scriptlode("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js");
+        scriptlod.then((value) => {
+            console.log("Script are loded")
+            scriptlode("https://cn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js").then((value)=>{
+                console.log("second Script are loded")
+
+            }).catch(()=>{
+                console.log("Second Script are not loded")
+            })
+            scriptlode("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js");
+        }).then((value)=>{
+            console.log("Therd Script are loded")
+        })
+
+    </script>
+</body>
+
+</html>

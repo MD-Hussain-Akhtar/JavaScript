@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call pack method in promis onlode script</title>
+</head>
+<body>
+
+    
+    <script>
+       let  scriptlode=async(src)=>{
+            let ah= new Promise((resolve,reject)=>{
+                let script=document.createElement("script");
+                script.src=src
+                document.body.appendChild(script);
+                resolve("script are loded")
+            })
+            let a=await ah
+            console.log(a)
+        }
+ let b= scriptlode("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js")
+console.log(b)
+    </script>
+</body>
+</html>

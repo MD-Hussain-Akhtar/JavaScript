@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback-Promiss</title>
+</head>
+<body>
+    
+
+    <script>
+let p1=new Promise((resole,reject)=>{
+    console.log("panding your Recherage");
+    setTimeout(() => {
+        resole();
+    }, 5000);
+});
+
+p1.then((value)=>{
+    console.log("your reachearge sussfullay");
+});
+
+let p2=new Promise((resole,reject)=>{
+    console.log("panding your Recherage");
+    setTimeout(() => {
+        console.log(new Error("your Reacharge is not suessfullay"))
+        reject();
+
+    }, 5000);
+});
+
+p2.catch((Error)=>{
+   console.log("your Reachare is failds");
+});
+    </script>
+</body>
+</html>

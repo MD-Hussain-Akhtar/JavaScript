@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Array</title>
+</head>
+
+<body>
+    <h1>Define Array</h1>
+    <script>
+        // 1 Create a array
+
+        var a = new Array(3);
+        a[0] = 12;
+        a[1] = 12;
+        a[2] = 12;
+        document.write(a + "<br>");
+
+        // 2 Create a array
+
+        var b = new Array(12, "Hallo")
+        document.write(b + "<br>");
+
+        // 3 Create a array
+        var b = [12, 13, 14, 16, 16];
+        document.write(b+"<br>");
+        document.write("<h2>Addition in Array</h2><br>");
+        var add=new Array(12,12,1,122,134);
+        //push methad  is used to insert new element in array 
+        add[add.length]=24;//it is used to fix in last value of array
+        add.push(155);
+        document.write("old"+add+"<br>")
+        // sort Syntex is used to sort is number in array
+     add.sort();
+        document.write("before"+add)
+
+
+    </script>
+</body>
+
+</html>

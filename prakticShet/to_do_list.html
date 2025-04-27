@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="to_do_list.css">
+    <title>To do list</title>
+</head>
+<body>
+    <h1>To do list</h1>
+    <input type="text" id="input" placeholder="Enter value">
+    <button onclick="add()">Add</button>
+    <div class="box1"></div>
+
+    <script>
+       function add() {
+           let box1 = document.querySelector(".box1");
+           let new_div = document.createElement("div")[0];
+           let input = document.getElementById("input").value;
+           
+           if (input) {
+               new_div.textContent = input;
+               new_div.insertAdjacentHTML("afterbegin",'<div style="border: 2px solid black; margin-top: 20px;">hussain akhter</div>');
+
+               box1.appendChild(new_div);
+               document.getElementById("input").value = ""; // Clear input field
+           }
+       }
+
+
+
+    //    function add(){
+    //     var box1=document.getElementsByClassName("box1")[0];
+    //  
+
+    //    }
+    </script>
+</body>
+</html>

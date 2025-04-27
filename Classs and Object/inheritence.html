@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inheritence</title>
+</head>
+<body>
+  <script>
+    class emp{
+      constructor(name,id){
+        this.name=name;
+        this.id=id;
+      }
+      get(){
+        console.log(`emp name is ${this.name} and id is ${this.id}`);
+      }
+    }
+    class boos extends emp{
+      constructor(name,id){
+        super(name,id)
+      }
+       intrduction(){
+        super.get()
+
+       }
+    }
+    let mainBoss=new boos("hussain akhter",12)
+   console.log(mainBoss.intrduction())
+  </script>
+</body>
+</html>

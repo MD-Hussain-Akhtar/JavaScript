@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class And Object</title>
+</head>
+
+<body>
+
+
+    <script>
+        class registasion {
+            submit(name,trainno) {
+                this.name = name;
+                this.trainno = trainno;
+                alert(this.name + "is Submited Train no " + this.trainno)
+            }
+            cancil(){
+                alert(this.name +"fome is cancil train no "+this.trainno)
+            }
+        }
+        let train=new registasion();
+        train.submit("Hussain Akhter",123);
+        train. cancil("Hussain Akhter",123);
+    </script>
+</body>
+
+</html>

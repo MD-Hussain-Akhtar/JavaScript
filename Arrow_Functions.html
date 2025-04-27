@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <script>
+// var a=(n)=> n>10 ? "true":"false"
+// console.log(a(2))
+
+let a={
+    name:"Hussain akhter",
+    rollno:12,
+    branch:"computer Scence",
+    show:function(){
+        setTimeout(()=>{
+           console.log(`Student Name is ${this.name} and Rollno is ${this.rollno} and Branch ${this.branch}`)
+    },2000)
+}
+}
+a.show();
+    </script>
+</body>
+</html>

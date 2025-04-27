@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custem Error</title>
+</head>
+<body>
+    
+
+    <script>
+   
+        try{
+        let age=parseInt(prompt("enter your age"))
+        
+          if(age>140){
+            throw new Error("invalid age :"+age)
+          }else{
+              console.log("!valid age :"+age)
+          }
+        }catch(e){
+            console.log(e)
+        }finally{
+            console.log("yes bos i am persint")
+        }
+    </script>
+</body>
+</html>

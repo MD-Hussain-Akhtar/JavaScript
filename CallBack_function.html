@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call back function</title>
+</head>
+<body>
+    
+
+    <script>
+    // Asynchronic function:-
+    // let name=prompt("enter your name:-");
+    // let age=prompt("Enter your age:-");
+    // let culifiction=prompt("enter your Colifiction:-");
+    // document.write("my name is "+ name+" and my age is"+ age +"and my collifiction is"+ culifiction);
+   
+   //Synchronize
+//    console.log("one");
+//   let a= setTimeout(()=>{
+//        console.log("two")
+//    },3000);
+  
+//    console.log("three");
+
+// Call back functions:-
+   function LodeScript(src,callback){
+var script=document.createElement("script");
+script.src=src;
+callback(null,src);
+script.onload=()=>{
+    console.log("Script is Loaded"+src);
+}
+script.onerror=()=>{
+    console.log("script error an src"+src);
+    callback(new Error("Src got are soon"))
+}
+document.body.appendChild(script);
+
+   }
+
+function hello(error,src){
+    if(error){
+        console.log(error);
+        return;
+    }else{
+    alert("hello word"+src)
+    }
+}
+LodeScript("https://cdn.jsdelivar.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",hello);
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inserting Method</title>
+</head>
+<body>
+    <div id="first">
+hii how are you
+    </div>
+
+
+<script>
+    let a=document.getElementsByTagName("div")[0];
+    a.innerHTML=a.innerHTML+"hussain akhter";
+
+    let creatdiv=document.createElement('div');
+    creatdiv.innerHTML="hello word";
+    // a.prepend(creatdiv)
+    // a.append(creatdiv)
+    // a.before(creatdiv)
+    // a.after(creatdiv)
+    a.replaceWith(creatdiv)
+</script>
+</body>
+</html>

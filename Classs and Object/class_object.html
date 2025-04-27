@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Object</title>
+</head>
+
+<body>
+
+
+    <script>
+        class detali {
+            async accept() {
+                var name = prompt("enter student name:")
+                var rollno = prompt("enter student rollno:")
+                var baranch = prompt("enter branch name:")
+                if (name == "hussain" && rollno == "3" && baranch == "computer") {
+                    console.log("Welcome to my collage Student!")
+                    let list = {
+                        fee: 1,
+                        call: 2,
+                        conntect: 3,
+                        AllStudentDelaild: 4
+                    };
+                    for (let i in list) {
+                        console.log(i, list[i])
+                    }
+                    setTimeout(() => {
+                        let choice = prompt("Enter choice list:");
+                        switch (choice) {
+                            case "1":
+                                let total_fee = 30000;
+                                console.log("first year your collage fee:" + total_fee)
+                                let fee = parseInt(prompt("enter your fee paid is time amount to pay:"))
+                                let a = [
+                                    "your payment are process...",
+                                    "your Payment Secussfuly...",`yu are today payments ${fee} and your fee aur paid ${fee-total_fee}`
+                                ]
+                                let sleep = async (second) => {
+                                    return new Promise((resoul, raject) => {
+                                        setTimeout(() => { resoul() }, second * 2000)
+                                    })
+
+                                }
+
+                                let showhack = async (message) => {
+                                    await sleep(4);
+                                    console.log(message)
+                                }
+                                (async () => {
+                                    for (var i = 0; i < a.length; i++) {
+                                        await showhack(a[i])
+                                    }
+                                })()
+                                
+
+                        }
+
+
+                    }, 5000);
+                } else {
+                    throw console.error("your condiction is note match");
+                }
+            }
+        }
+        var detalis = new detali();
+        detalis.accept();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser event</title>
+</head>
+<body>
+    <div class="cointerner" onmouseenter="console.log('hello word');">
+
+   
+    <button onclick="console.log('onclick method click');">click</button>
+</div>
+<script>
+    let cointerner=document.getElementsByClassName("cointerner");
+    cointerner.onclick=()=>{
+        console.log("hello word");
+    }
+</script>
+</body>
+</html>

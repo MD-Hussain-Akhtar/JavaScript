@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Destructuring_assignment and operater</title>
+</head>
+<body>
+    
+
+    <script>
+        // let arr=[12,134,13]
+        // let [a,b,...rest]=arr
+        // console.log(a,rest)
+
+
+       
+        let {a,b,c}={a:1,b:3,c:4}
+        console.log(a,b)
+
+// Spread Operator
+        let arr=[1,2,34]
+        let obj={...arr}
+        console.log(obj)
+
+        function sum(a,b,c){
+            return a+b+c;
+        }
+        console.log(sum(...arr))
+
+        let sh={
+            name:"shaddam",
+            branch:"computer"
+        }
+        console.log({...sh,name:"hussain akhter"})
+    </script>
+</body>
+</html>

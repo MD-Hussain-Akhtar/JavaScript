@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quice </title>
+</head>
+<body>
+    
+
+<script>
+    let lodedScript=(src)=>{
+        return new Promise((resolve,reject)=>{
+            let Script=document.createElement("script");
+            Script.src=src;
+            document.body.appendChild(Script);
+            Script.onload=()=>{
+                resolve("script are loded");
+            }
+            Script.onerror=()=>{
+                reject("your Scripted are note loded")
+            }
+            
+        })
+    }
+    let p1=lodedScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js");
+    p1.then((value)=>{
+        setTimeout(()=>{
+
+            console.log("your Script are loded")
+            return lodedScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js");
+
+        },5000)
+        }).then((value)=>{
+            setTimeout(()=>{
+
+                console.log("Second Scrip are loded")
+            },6000)
+    })
+        </script>
+</body>
+</html>

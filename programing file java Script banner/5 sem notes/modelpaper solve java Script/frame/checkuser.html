@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+function check(){
+    var name=document.getElementById("name").value;
+    
+    var namearru=["hussain","mallick"]
+for(i=0;i<=namearru.length;i++){
+    if(name === namearru[i]){
+        document.write("login Sessfully");
+        break;
+    }else{
+        document.write("note sessfully faild");
+        break;
+    }
+}
+}
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    username <input type="text" name="" id="name">
+
+    <button onclick="check()">login</button>
+</body>
+
+</html>

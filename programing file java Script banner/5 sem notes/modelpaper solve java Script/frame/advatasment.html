@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+    var arr=new Array("pic1.jpeg","pic2.jpeg","pic3.jpeg",);
+    var lnk=new Array("https://www.google.com/","https://www.google.com/","https://www.google.com/");
+    var bannercount=0;
+    function linkBanner(){
+        document.location.href=lnk[bannercount];
+    }
+    function bannerDisplay(){
+        if(document.images){
+            bannercount++;
+            if(bannercount==arr.length){
+                bannercount=0;
+            }
+        }
+        document.img.src=arr[bannercount];
+        setTimeout("bannerDisplay()",300);
+    }
+   </script>
+    <title>Document</title>
+</head>
+<body onload="bannerDisplay()">
+    <a href="javaScript:linkBanner()">
+    <img src="pic1.jpeg" name="img" alt="">
+</a>
+</body>
+</html>

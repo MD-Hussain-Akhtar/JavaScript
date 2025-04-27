@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geter Seter and instanceOf </title>
+</head>
+
+<body>
+
+    <script>
+        class person {
+            constructor(name, rollno) {
+                this.name = name;
+                this.rollno = rollno;
+            }
+
+            get name() {
+                return this._name;
+
+            }
+            get rollno() {
+                return this._rollno
+            }
+
+            set name(new_name) {
+                this._name = new_name;
+
+            }
+
+            set rollno(new_rollno) {
+                this._rollno = new_rollno;
+            }
+
+        }
+        let a = new person("hussain Akhter", 3);
+        console.log(`i am ${a.name} and my Rollno  is ${a.rollno}`)
+
+        console.log(a instanceof person)
+        console.log(a instanceof Array)
+        console.log(a instanceof Object); // true
+        
+    </script>
+</body>
+
+</html>

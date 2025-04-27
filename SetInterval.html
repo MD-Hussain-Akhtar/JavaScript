@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeInterval</title>
+</head>
+<body>
+    
+<button id="stop">stop</button>
+    <script>
+        //first example 1:
+    //    let repet= setInterval(function(){
+    //         console.log("hello word")
+    //     },1000);
+    //    let stop=document.getElementById("stop");
+    //    stop.addEventListener("click",function()
+    // {   
+    //   clearInterval(repet);  
+    // })
+
+    //first example 2:
+    let repet=()=>{
+       console.log("hello word");
+    };
+    let a=setInterval(repet,100);
+    let stop=document.getElementById("stop");
+        stop.addEventListener("click",function()
+     {   
+       clearInterval(a);  
+     })
+    </script>
+</body>
+</html>

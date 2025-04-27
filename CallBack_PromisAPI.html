@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Back Promis API</title>
+</head>
+<body>
+    <script>
+      //There are 6 static method of promis class
+      //(1)promise.all method is wait for all promise to resolve and return the array. of there result .if anyu one fail it become the error Ad Ll other result are ignore.
+
+    //   let p1=new Promise((resolve,reject)=>{
+    //     setTimeout(() => {
+    //         resolve("process complete");
+    //     }, 2000);
+    //   })
+    //   let p2=new Promise((resolve,reject)=>{
+    //     setTimeout(() => {
+    //         resolve("proces 2 complete");
+    //     }, 3000);
+    //   })
+    //   let p3=new Promise((resolve,reject)=>{
+    //     setTimeout(() => {
+    //         resolve("process 3 complete");
+    //     }, 4000);
+    //   });
+    //   let allprocess=Promise.all([p1,p2,p3]);
+    // allprocess.then((value)=>{
+    //     console.log(value)
+    // }).catch((err)=>{
+    //     console.log(err)
+    // })
+    //(2)Promise.allSettled
+    // let p1=new Promise((resolve,reject)=>{
+    //     setTimeout(() => {
+    //         resolve("process complete");
+    //     }, 2000);
+    //   })
+    //   let p2=new Promise((resolve,reject)=>{
+    //     setTimeout(() => {
+    //         resolve("proces 2 complete");
+    //     }, 3000);
+    //   })
+    //   let p3=new Promise((resolve,reject)=>{
+    //     setTimeout(() => {
+    //         resolve("process 3 complete");
+    //     }, 4000);
+    //   });
+    //   let allprocess=Promise.allSettled([p1,p2,p3]);
+    //   allprocess.then((value)=>{
+    //        console.log(value)
+    //   })
+
+    //3 promise.rece waite for the first promise to sattle and ir result /error becouse the outcome
+
+    // let p1=new Promise((resolve,reject)=>{
+    //     setTimeout(() => {
+    //         resolve("process complete");
+    //     }, 2000);
+    //   })
+    //   let p2=new Promise((resolve,reject)=>{
+    //     setTimeout(() => {
+    //         reject("proces 2 reject");
+    //     }, 3000);
+    //   })
+    //   let p3=new Promise((resolve,reject)=>{
+    //     setTimeout(() => {
+    //         resolve("process 3 complete");
+    //     }, 4000);
+    //   });
+    //   let allprocess=Promise.race([p1,p2,p3]);
+    //   allprocess.then((value)=>{
+    //        console.log(value)
+    //   })
+
+    //4  promise.any
+    // let p1=new Promise((resolve,reject)=>{
+    //     setTimeout(() => {
+    //         resolve("process complete");
+    //     }, 2000);
+    //   })
+    //   let p2=new Promise((resolve,reject)=>{
+    //     setTimeout(() => {
+    //         resolve("proces 2 complete");
+    //     }, 3000);
+    //   })
+    //   let p3=new Promise((resolve,reject)=>{
+    //     setTimeout(() => {
+    //         resolve("process 3 complete");
+    //     }, 4000);
+    //   });
+    //   let allprocess=Promise.any([p1,p2,p3]);
+    //   allprocess.then((value)=>{
+    //        console.log(value)
+    //   })
+    </script>
+</body>
+</html>
